@@ -1,13 +1,13 @@
 #from ctypes import WinDLL, c_char, c_long, c_double, POINTER, \
      #WINFUNCTYPE, byref, create_string_buffer, pointer, string_at
-from ctypes.wintypes import LPCSTR, LPSTR, DWORD, CHAR, PDWORD
-from ctypes.util import find_library
+#from ctypes.wintypes import LPCSTR, LPSTR, DWORD, CHAR, PDWORD
+#from ctypes.util import find_library
 import pandas as pd
 import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
-import warnings
-warnings.filterwarnings('ignore')
+#import warnings
+#warnings.filterwarnings('ignore')
 import plotly
 #from plotly.offline import download_plotlyjs, init_notebook_mode , plot,iplot
 import plotly.express as px
@@ -17,7 +17,7 @@ from plotly.colors import n_colors
 from plotly.subplots import make_subplots
 import cufflinks as cf
 cf.go_offline()
-import itertools
+#import itertools
 #------------------------------------------------------------------------------------------------------------------
 #streamlit run "c:\Users\dhakksinesh\Desktop\PRO 1\cre.py"
 st.header('CRIME ANALYSIS AND PREDICTION USING MACHINE LEARNING ALGORITHM')
