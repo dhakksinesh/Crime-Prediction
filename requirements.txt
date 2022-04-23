@@ -2,7 +2,6 @@ pandas
 numpy
 streamlit
 matplotlib
-warnings
 plotly
 cufflinks
 itertools
