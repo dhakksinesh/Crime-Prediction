@@ -27,8 +27,8 @@ st.subheader('DATA ANALYSIS')
 dataset = pd.read_csv("20_Victims_of_rape - Copy.csv")
 dataset.index = np.arange(1, len(dataset)+1)
 st.subheader("\n")
-st.caption("Rape Cases Reported - Dataset")
-st.dataframe(dataset)
+st.caption("Rape Cases Reported - Dataset Sample")
+st.dataframe(dataset.head(5))
 #-----------------------------------------------------------year-sum-------------------------------------------------
 df1 = pd.read_csv('20_Victims_of_rape.csv')
 df1= df1[df1['Subgroup']=='Total Rape Victims']
