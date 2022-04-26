@@ -963,6 +963,31 @@ if choice_state=='West Bengal':
 st.subheader("\n")
 st.subheader("\n")
 st.subheader("ACCURACY COMPARISON")
+#--------------------------------------------------------RF--------------------------------------------------------
+
+dataset = pd.read_csv('20_Victims_of_rape - Copy.csv')
+dataset.index = np.arange(1, len(dataset)+1)
+dataset.describe()
+dataset = dataset.select_dtypes(exclude=['object'])
+dataset = dataset.fillna(dataset.mean())
+X = dataset.drop('Total_19', axis=1)
+y = dataset['Total_19']
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+from sklearn.ensemble import RandomForestRegressor
+regressor = RandomForestRegressor(n_estimators = 1000, random_state = 0)
+regressor.fit(X_train, y_train)
+y_pred = regressor.predict(X_test)
+dataset=pd.DataFrame({'Current':y_test, 'Predicted':y_pred.round()})
+from sklearn import metrics
+errors = abs(y_pred - y_test)
+round(np.mean(errors), 2)
+mape = 100 * (errors / y_test)
+accuracy = 100 - np.mean(mape)
+acc=(round(accuracy, 2))
+st.subheader("\n")
+st.caption("Random Forest Accuracy %")
+st.success(acc)
 #--------------------------------------------------------svm-------------------------------------------------------
 dataset = pd.read_csv('20_Victims_of_rape - Copy.csv')
 dataset.describe()
