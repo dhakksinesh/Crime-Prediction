@@ -1065,5 +1065,5 @@ accuracy = 100 - np.mean(mape)
 acc=(round(accuracy, 2))
 st.subheader("\n")
 st.caption("KNN Accuracy %")
-st.warning(acc)
+st.error(acc)
 #-----------------------------------------------------------------------------------------------------------------
