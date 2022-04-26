@@ -20,8 +20,8 @@ cf.go_offline()
 #import itertools
 #------------------------------------------------------------------------------------------------------------------
 #streamlit run "c:\Users\dhakksinesh\Desktop\PRO 1\cre.py"
-st.header('CRIME ANALYSIS AND PREDICTION USING MACHINE LEARNING ALGORITHM')
-st.caption("By TEAM E-14")
+st.header('CRIME ANALYSIS AND PREDICTION BASED ON MACHINE LEARNING ALGORITHM')
+st.caption("BY TEAM E-14")
 #----------------------------------------------------------dataset---------------------------------------------------
 st.subheader('DATA ANALYSIS')
 dataset = pd.read_csv("20_Victims_of_rape - Copy.csv")
