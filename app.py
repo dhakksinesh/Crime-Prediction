@@ -147,11 +147,14 @@ st.subheader("\n")
 st.caption("Regression Score")
 r=r2_score(y_test, y_pred)
 st.info(r)
-#HEATMAP
+#-------------------------------------------------------corr-matrix---------------------------------------------------
+#corrmatrix
+dataset = pd.read_csv("20_Victims_of_rape - Copy.csv")
+corr = dataset.corr()
+st.write(corr)
+#heatmap
 #st.subheader("\n")
 #st.caption("Heat Map")
-#dataset = pd.read_csv("20_Victims_of_rape - Copy.csv")
-#corr = dataset.corr()
 #fig=plt.figure(figsize=(16,9))
 #j=sns.heatmap(corr, annot=True)
 #st.write(j,fig)
