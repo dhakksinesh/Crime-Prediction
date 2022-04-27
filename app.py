@@ -154,7 +154,7 @@ dataset = pd.read_csv("20_Victims_of_rape - Copy.csv")
 corr = dataset.corr()
 plt.figure(figsize=(16,9))
 j=sns.heatmap(corr, annot=True)
-st.plotly_chart(j, use_container_width=True)
+st.write(j)
 #-------------------------------------------------------state-pred---------------------------------------------------
 df = pd.read_csv('20_Victims_of_rape - Copy.csv')
 df.index = np.arange(1, len(df)+1)
