@@ -147,17 +147,6 @@ st.subheader("\n")
 st.caption("Regression Score")
 r=r2_score(y_test, y_pred)
 st.info(r)
-#-------------------------------------------------------corr-matrix---------------------------------------------------
-#corrmatrix
-dataset = pd.read_csv("20_Victims_of_rape - Copy.csv")
-corr = dataset.corr()
-st.write(corr)
-#heatmap
-#st.subheader("\n")
-#st.caption("Heat Map")
-#fig=plt.figure(figsize=(16,9))
-#j=sns.heatmap(corr, annot=True)
-#st.write(j,fig)
 #-------------------------------------------------------state-pred---------------------------------------------------
 df = pd.read_csv('20_Victims_of_rape - Copy.csv')
 df.index = np.arange(1, len(df)+1)
@@ -971,6 +960,22 @@ if choice_state=='West Bengal':
     st.caption("State Prediction Table")
     df=pd.DataFrame({'Current':y, 'Predicted':i})
     st.write(df)
+#-------------------------------------------------------corr-matrix---------------------------------------------------
+#corrmatrix
+st.subheader("\n")
+st.subheader("\n")
+st.subheader('CORRELATION MATRIX')
+st.subheader("\n")
+st.caption("Matrix")
+dataset = pd.read_csv("20_Victims_of_rape - Copy.csv")
+corr = dataset.corr()
+st.write(corr)
+#heatmap
+st.subheader("\n")
+st.caption("Heat Map")
+fig=plt.figure(figsize=(16,9))
+j=sns.heatmap(corr, annot=True)
+st.write(j,fig)
 #-----------------------------------------------------------------------------------------------------------------
 st.subheader("\n")
 st.subheader("\n")
