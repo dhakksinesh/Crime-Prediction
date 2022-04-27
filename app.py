@@ -139,13 +139,21 @@ st.subheader('RANDOM FOREST')
 st.subheader("\n")
 st.caption("Accuracy %")
 st.success(acc)
-
+#R2SCORE
 from sklearn.metrics import r2_score
 st.subheader("\n")
 st.subheader("\n")
 st.caption("Regression Score")
 r=r2_score(y_test, y_pred)
 st.info(r)
+#HEATMAP
+st.subheader("\n")
+st.subheader("Heat Map")
+dataset_2 = dataset.drop(columns='Total_19')
+corr = dataset.corr()
+plt.figure(figsize=(16,9))
+j=sns.heatmap(corr, annot=True)
+st.write(j)
 #-------------------------------------------------------state-pred---------------------------------------------------
 df = pd.read_csv('20_Victims_of_rape - Copy.csv')
 df.index = np.arange(1, len(df)+1)
