@@ -20,7 +20,7 @@ import cufflinks as cf
 cf.go_offline()
 #import itertools
 #------------------------------------------------------------------------------------------------------------------
-#streamlit run "c:\Users\dhakksinesh\Desktop\CODE\app.py"
+st.set_page_config(page_title="Crime Prediction", page_icon=":mag:", layout="wide")
 st.header('CRIME ANALYSIS AND PREDICTION BASED ON MACHINE LEARNING ALGORITHM')
 st.caption("BY TEAM E-14")
 #----------------------------------------------------------dataset---------------------------------------------------
