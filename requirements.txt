@@ -4,5 +4,5 @@ streamlit
 matplotlib
 plotly
 cufflinks
-sklearn
+scikit-learn
 seaborn
